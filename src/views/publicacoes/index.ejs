@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar/Produtos.ejs') %>
+
+<%- include('../partials/apresentacoes/produto/card_apresentacao.ejs') %>
+
+
+<div class="progresso_pagina">
+    <% if(anterior==true){ %>
+        <a href="/produto/<%= Number(page)-1 %>">ANTERIOR</a>
+    <% } %>
+    <% if(proxima==true){ %>
+        <a href="/produto/<%= Number(page)+1 %>">PROXIMA</a>
+    <% } %>
+</div>
+<%- include('../partials/footer_default.ejs') %>
+

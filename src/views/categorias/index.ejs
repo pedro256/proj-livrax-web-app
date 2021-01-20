@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar/Categorias.ejs') %>
+<%- include('../partials/navbar/Categorias_carrossel.ejs') %>
+
+
+<%- include('../partials/apresentacoes/categorias/card_apresentacao_subcategoria.ejs') %>
+
+<div class="progresso_pagina">
+    <% if(anterior==true){ %>
+        <a href="/categorias/<%= Number(page)-1 %>">ANTERIOR</a>
+    <% } %>
+    <% if(proxima==true){ %>
+        <a href="/categorias/<%= Number(page)+1 %>">PROXIMA</a>
+    <% } %>
+</div>
+<%- include('../partials/footer.ejs') %>

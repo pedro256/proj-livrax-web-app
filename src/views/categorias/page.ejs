@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar/Categorias.ejs') %>
+
+<div class="row">
+    <div class="col-md-6"> 
+        <img src="<%= item.foto %>" alt="Imagem" class="img-apresentation">
+    </div>
+    <div class="col-md-6 data-apresentation">
+        <h1><%= item.nome %></h1>
+        <a href="#">0 produtos</a>
+        <br>
+        <a href="#">Likes: <%= item.likes %></a>
+        <br>
+        <a href="#">Dislikes: <%= item.likes %></a>
+    </div>
+</div>
+<div class="data-apresentation">
+    <p>Descricao: <%= item.descricao %></p>
+</div>
+
+<%- include('../partials/footer_default.ejs') %>

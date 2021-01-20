@@ -1,0 +1,39 @@
+<div class="container">
+    <h5 class="section-title h1">Produtos</h5>
+    <br>
+    <div class="titulo_1">
+        <h2>Principal</h2>
+    </div>
+    <br>
+    <div id="products" class="row view-group">
+        <% produtos.forEach(element => { %>
+        <div class="item col-xs-4 col-lg-4">
+            <div class="thumbnail card">
+                <div class="img-event">
+                    <img class="group list-group-image img-fluid img-produto-card-pequeno"
+                        src="<%= element.img_filename %>" alt="img" />
+                </div>
+                <div class="caption card-body">
+                    <h4 class="group card-title inner list-group-item-heading">
+                        <%= element.nome_produto %></h4>
+                    <p class="group inner list-group-item-text">
+                        <%= element.descricao %></p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-3">
+                            <p class="lead">
+                                R$ <%= element.preco_produto %></p>
+                        </div>
+                        <div class="col-xs-12 col-md-3">
+                            <p class="lead">
+                                Qtd. <%= element.quantidade %></p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="#">Saber Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>

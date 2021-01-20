@@ -1,0 +1,34 @@
+<section id="team">
+    <div class="container">
+        <h5 class="section-title h1">Vendedores</h5>
+        <div class="row">
+            <% vendedores_destaques.forEach(element => { %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip">
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="<%= element.foto_perfil %>" alt="card image"></p>
+                                    <h4 class="card-title"><%= element.nome %></h4>
+                                    <p class="card-text"><%= element.descricao_dividida %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title"><%= element.nome %></h4>
+                                    <p class="card-text"><%= element.descricao_completa %></p>
+                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn">Saber
+                                        Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

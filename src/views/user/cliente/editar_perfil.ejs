@@ -1,0 +1,77 @@
+<%- include('../../partials/header.ejs') %>
+<%- include ('../../partials/navbar/Cliente.ejs') %>
+
+<div class="container emp-profile">
+    <form method="POST" action="/cliente/update">
+        <input type="hidden" name = "id" value="<%= dados_usuario.id %>">
+        <div class="profile-head">
+            <h2>Editar Dados</h2>
+            <h6 >Todos os dados devem ser preenchidos de maneira correta, as modificações não serão desfeitas.</h6>
+        </div>
+        
+        <div class="card-group">
+                <div class="signup-form div-2 padding-5">
+                    <h3><img class="icon_40" src="http://localhost:3333/icons/icouser.png"> Pessoal</h3>
+                <hr>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="nome" placeholder="Nome completo" value = "<%= dados_usuario.nome %>" required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="e_mail" placeholder="Email" value = "<%= dados_usuario.e_mail %>" required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="senha" placeholder="Senha de acesso" value = "<%= dados_usuario.senha %>" required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="confirmar-senha" placeholder="Confirmar senha"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>Data de nascimento</label>
+                        <input type="datetime-local" class="form-control" value = "<%= dados_usuario.data_nascimento %>" name="data_nascimento" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" class="form-control" name="cpf" placeholder="_ _ _ . _ _ _ . _ _ _ - _ _" value="<%= dados_usuario.cpf %>"
+                            required="required">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" name='sua_descricao' placeholder="Descrição"><%= dados_usuario.sua_descricao %></textarea>
+                    </div>
+                </div>
+            <div class="signup-form div-2">
+                <h3><img class="icon_40" src="http://localhost:3333/icons/icoAdress.png"> Endereço</h3>
+                <hr>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nome_estado" value = "<%= dados_usuario.nome_estado %>" placeholder="Estado" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nome_cidade" value = "<%= dados_usuario.nome_cidade %>" placeholder="Cidade" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="nome_bairro" value = "<%= dados_usuario.nome_bairro %>" placeholder="Bairro" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="logradouro" value = "<%= dados_usuario.logradouro %>" placeholder="Logradouro" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="complemento_endereco" value = "<%= dados_usuario.complemento_endereco %>"
+                        placeholder="Complemento de Endereço">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="cep" placeholder="CEP" value = "<%= dados_usuario.cep %>" required >
+                </div>
+                <div class="form-group padding-top-50">
+                    <div class="align-center">
+                        <a href="/"><button type="button" id="success" class="btn btn-primary btn-lg">Retornar</button></a>
+                        <button type="submit" id="success" class="btn btn-success btn-lg">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<%- include('../../partials/footer_default.ejs') %>

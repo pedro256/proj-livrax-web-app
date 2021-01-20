@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-xl navbar-dark">
+
+	<a href="#" class="navbar-brand"><i class="fa fa-cube"></i>Livra<b>X</b></a>  	
+
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+
+		<form class="navbar-form form-inline">
+			<div class="input-group search-box">								
+				<input type="text" id="search" class="form-control" placeholder="Procurar Algo...">
+				<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+			</div>
+		</form>
+
+		<div class="navbar-nav ml-auto">
+			<a href="/produto/1" class="nav-item nav-link active aligned">Produtos</a>
+			<a href="/" class="nav-item nav-link aligned">Vendedores</a>
+			<a href="/categorias/1" class="nav-item nav-link aligned">Categorias</a>
+            
+			<div class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action"><img src="<%= dados_usuario.foto_perfil %>" alt = "foto" class="avatar" alt="Avatar"> <%= dados_usuario.nome %><b class="caret"></b></a>
+				<div class="dropdown-menu">
+                    <a href="/cliente/perfil" class="dropdown-item"> Perfil</a>
+                    <a href="#" class="dropdown-item"> Compras Finalizadas</a>
+					<a href="#" class="dropdown-item"> Conversas</a>
+					<a href="#" class="dropdown-item"> Notificações</a>
+					<a href="#" class="dropdown-item"> Configurações</a>
+					
+					<div class="divider dropdown-divider"></div>
+					<a href="/logout" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Sair</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

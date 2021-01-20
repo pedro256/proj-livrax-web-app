@@ -1,0 +1,58 @@
+<%- include('../../../partials/header.ejs') %>
+<%- include ('../../../partials/navbar/Vendedor.ejs') %>
+
+<form class="text-center principal" method='POST' action="/produto/create" enctype="multipart/form-data">
+  <input type="hidden" class="form-control" name='vendedorId' value="<%= dados_vendedor.id %>">
+
+  <div class="card-group">
+    <div class="form-group div-2">
+      <div class="btn btn-success btn-sm col-sm-12">
+        <span>Imagem do Produto</span><input type="file" name='filename'>
+      </div>
+    </div>
+    <div class="form-group div-2">
+      <label>Titulo do Produto</label>
+      <input type="text" class="form-control" name="nome_produto">
+    </div>
+  </div>
+  
+  <div class="card-group">
+    <div class="form-group div-2">
+      <label>Preço</label>
+      <input type="text" placeholder="00.0" name="preco_produto" class="form-control" />
+    </div>
+    <div class="form-group div-2">
+      <label>Quantidade</label>
+      <input type="text" placeholder="00" name="quantidade" class="form-control" />
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <select class="form-control" id="categoriaId" name='categoriaId'>
+      <option value="0">Escolher categoria</option>
+      <% categorias.forEach( categoria => { %>
+        <option value="<%=categoria.id %>"><%=categoria.nome %></option>
+      <% }) %>
+    </select>
+  </div>
+
+  <div class="card-group">
+    <div class="form-group div-2">
+      <label>Descrição</label>
+      <textarea class="form-control" name='descricao'></textarea>
+    </div>
+    <div class="form-group div-2">
+      <label>Detalhes Tecnicos</label>
+      <textarea class="form-control" name='destalhes_importantes'></textarea>
+    </div>
+  </div>
+
+  <div class="form-group padding-top-50">
+    <div class="align-center">
+        <button type="submit" id="success" class="btn btn-success btn-lg">Publicar</button>
+    </div>
+</div>
+
+</form>
+
+<%- include('../../partials/footer_default.ejs') %>

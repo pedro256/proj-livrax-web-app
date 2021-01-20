@@ -1,0 +1,22 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar/Produtos.ejs') %>
+
+<div class="row">
+    <div class="col-md-6"> 
+        <img src="<%= item.img_filename %>" alt="Imagem" class="img-apresentation">
+    </div>
+    <div class="col-md-6 data-apresentation">
+        <h1><%= item.nome_produto %></h1>
+        <a href="#"><%= item.quantidade %> disponivel</a>
+        <br>
+        <a href="#">Likes: <%= item.n_positivos %></a>
+        <br>
+        
+        <a href="#">Dislikes: <%= item.n_negativos %></a>
+    </div>
+</div>
+<div class="data-apresentation">
+    <p>Descricao: <%= item.descricao %></p>
+</div>
+
+<%- include('../partials/footer_default.ejs') %>

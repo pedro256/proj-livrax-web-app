@@ -1,0 +1,74 @@
+<%- include('../../partials/header.ejs') %>
+
+<div class="signup-form">
+    <form action="/criar-vendedor" method="post" enctype="multipart/form-data">
+		<h2>Cadastro</h2>
+		<p>Preencha o formulário para criar a conta!</p>
+        <hr>
+        <div class="form-group ">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name ='filename'id="customFile">
+                <label class="custom-file-label" for="customFile">Foto de Perfil</label>
+              </div>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="nome_profissional_responsavel" placeholder="Nome completo do profissional responsavel" required="required">     	
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="nome_empresa" placeholder="Nome da empresa" required="required">     	
+        </div>
+        <div class="form-group">
+            <label>data de nascimento do vendedor</label>
+            <input type="datetime-local" class="form-control" name="data_nascimento_vendedor" required="required">     	
+        </div>
+        <div class="form-group">
+            <label>CPF</label>
+            <input type="text" class="form-control" name="cpf" placeholder="_ _ _ . _ _ _ . _ _ _ - _ _" required="required">    	
+        </div>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="e_mail" placeholder="Email da empresa ou do Vendedor" required="required">
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="site_profissional_empresa" placeholder="Site da empresa">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name='dados_profissionais' placeholder="Dados profissionais"></textarea>    	
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="senha" placeholder="Senha de acesso" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="confirmar-senha" placeholder="Confirmar senha" required="required">
+        </div>   
+        
+        <h3><img class = "icon_40" src="http://localhost:3333/icons/icoAdress.png"> Endereço do(a) Vendedor(a)/Empresa</h3>
+        <hr>
+        <div class="form-group">
+            <input type="text" class="form-control" name = "cep" placeholder="CEP" required>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name='bairro_cidade_estado'>
+                <option value="0">Escolha seu Bairro</option>
+                <% bairros.forEach( bairro => { %>
+                  <option value="<%=bairro.id %>"> <%=bairro.nome %> -  <%=bairro.bairro_cidade.nome %></option>
+                <% }) %>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <input type="text" class="form-control" name = "logradouro" placeholder="Logradouro" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name = "complemento_endereco" placeholder="Complemento de Endereço">
+        </div>
+        
+        <div class="form-group">
+			<label class="form-check-label"><input type="checkbox" required="required"> Eu li e concordo com os<a href="#"> termos de uso </a> &amp; <a href="#">Politica de privacidade</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+        </div>
+    </form>
+	<div class="hint-text">Você ja tem uma conta? <a href="/usuario/logar">Conecte aqui </a> .</div>
+</div>
+<%- include('../../partials/footer_default.ejs') %>

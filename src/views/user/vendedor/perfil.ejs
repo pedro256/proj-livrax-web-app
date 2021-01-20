@@ -1,0 +1,200 @@
+<%- include('../../partials/header.ejs') %>
+<%- include ('../../partials/navbar/Vendedor.ejs') %>
+
+<div class="container emp-profile">
+    <form method="get" action="/vendedor/update/<%= dados_vendedor.id %>">
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="<%= dados_vendedor.foto_perfil %>"
+                        alt="" />
+                    <div class="file btn btn-lg btn-primary">
+                        Mudar Foto
+                        <input type="file" name="file" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="profile-head">
+                    <h5>
+                        <%= dados_vendedor.nome_empresa %>
+                    </h5>
+                    <h6>
+                        <%= dados_vendedor.site_profissional_empresa %>
+                    </h6>
+                    <p class="proile-rating">CLASSIFICAÇÃO : <span>9/10</span></p>
+                </div>
+            </div>
+
+            <div class="col-md-3 button-editar">
+                <button type="submit" class="profile-edit-btn">Editar Perfil</button>
+                <button type="button" class="profile-edit-btn">Seus Negócios</button>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <ul class="nav nav-tabs nav-tabs-usuario" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Seus Dados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#endereco" role="tab" aria-controls="endereco" aria-selected="false">Endereço</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#empresa" role="tab" aria-controls="empresa" aria-selected="false">Empresa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#linha-tempo" role="tab" aria-controls="linha-tempo" aria-selected="false">Linha de tempo</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content profile-tab">
+
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Id do vendedor: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.id %> </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nome do vendedor: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.nome_profissional_responsavel %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>CPF: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.cpf %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Nascido: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p> ... Inserir </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.e_mail %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Telefone: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p> ... Inserir</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="endereco" role="tabpanel" aria-labelledby="endereco-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Pais: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Brasil</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Estado: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= bairro.cidade.estado.nome %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Cidade: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= bairro.cidade.nome %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Bairro: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= bairro.bairro_nome %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Logradouro: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.logradouro %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>CEP: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.cep %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Complemento de endereço: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p><%= dados_vendedor.complemento_endereco %></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="linha-tempo" role="tabpanel" aria-labelledby="linha-tempo-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Tempo: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Novo no Mega Livros</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Total comprado: </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>75 R$</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>Sua Descrição</label><br />
+                                <p><%= dados_vendedor.dados_profissionais %></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include('../../partials/footer_default.ejs') %>

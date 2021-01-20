@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@google-cloud/storage": "^5.2.0",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mime": "^2.4.6",
+    "mime-types": "^2.1.27",
+    "multer": "^1.4.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.4",
+    "sharp": "^0.25.4",
+    "socket.io": "^2.3.0"
+  },
+  "name": "livrax",
+  "version": "0.0.1",
+  "main": "",
+  "repository": "none",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  }
+}

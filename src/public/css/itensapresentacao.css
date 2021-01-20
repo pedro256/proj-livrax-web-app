@@ -1,0 +1,457 @@
+.carousel{
+    border-radius: 3px;
+    padding: 0;
+    background: #8c52ff;
+    margin: 0 auto;
+    width: 100%;
+}
+.carousel-item{
+    width: 100%;
+    text-align: center;
+    min-height: 300px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 500px;
+}
+.carousel-caption h5,.carousel-caption p{
+    color: #8c52ff;
+}
+.lista-rapida{
+    margin: 0 auto;
+    width: 90%;
+}
+.div-2{
+    width: 50%;
+    padding: 10px;
+}
+
+@media  only screen and (max-width: 600px){
+    .carousel-item img{
+        height: 300px;
+    }
+    .carousel{
+        margin-top: 20px;
+        width: auto;
+    }
+    .div-2{
+        width: 100%;
+    }
+    .items-slick-carousel-slider{
+        margin-top: 20px;
+        width: auto;
+    }
+    #carrossel-destaques{
+        padding-top: 5px;
+    }
+    .items-slick-carousel-slider{
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+.list-group-item button{
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner h3{
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+
+
+.items-slick-carousel-slider {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 5px;
+}
+.items-slick-carousel-slider .div-img-corousel-slider img{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #32CD32;
+}
+.div-img-corousel-slider:focus{
+    outline-style: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+.slick-slide {
+    margin: 10px;
+}
+
+.slick-slide img {
+    width: 100%;
+    border: 0px solid #fff;
+}
+
+
+/* aprensetacao dos  vendedores
+/* FontAwesome for working BootSnippet :> */
+.btn-primary {
+    color: #fff;
+    background-color: #8c52ff;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    color: #32CD32;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+/* apresentação produtos principais */
+.thumbnail
+{
+    margin-bottom: 30px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.cta-100 {
+    margin-top: 100px;
+    padding-left: 8%;
+    padding-top: 7%;
+  }
+  
+  .white {
+    color: #fff !important;
+  }
+  .mt{float: left;margin-top: -20px;padding-top: 20px;}
+  .bg-blue-ui {
+    background-color: #708198 !important;
+  }
+  .img-produto-card-pequeno{
+    width: max-content;
+    height: 200px;
+  }
+  
+  #blogCarousel {
+    padding-bottom: 100px;
+  }
+  
+  .blog .carousel-indicators {
+    left: 0;
+    top: -50px;
+    height: 50%;
+  }
+  
+  /* CARROSEL PRINCIPAL*/
+  #carroselPrincipal .carousel-item .mask {
+    position: absolute;
+    top: 0;
+	left:0;
+	height:100%;
+    width: 100%;
+    background-attachment: fixed;
+}
+#carroselPrincipal h4{
+	font-size:50px;
+	margin-bottom:15px;
+	color:#FFF;
+	line-height:100%;
+	letter-spacing:0.5px;
+	font-weight:600;
+}
+#carroselPrincipal p{
+	font-size:18px;
+	margin-bottom:15px;
+	color:#d5d5d5;
+}
+#carroselPrincipal .carousel-item a{background:#32CD32; font-size:14px; color:#FFF; padding:13px 32px; display:inline-block; }
+#carroselPrincipal .carousel-item a:hover{background:#394fa2; text-decoration:none;  }
+
+#carroselPrincipal .carousel-item h4{-webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;} 
+#carroselPrincipal .carousel-item p{-webkit-animation-name:slideInRight; animation-name:slideInRight;} 
+#carroselPrincipal .carousel-item a{-webkit-animation-name:fadeInUp; animation-name:fadeInUp;}
+#carroselPrincipal .carousel-item .mask img{-webkit-animation-name:slideInRight; animation-name:slideInRight; display:block; height:auto; max-width:100%;}
+#carroselPrincipal h4, #carroselPrincipal p, #carroselPrincipal a, #carroselPrincipal .carousel-item .mask img{-webkit-animation-duration: 1s;
+    animation-duration: 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+#carroselPrincipal .container {max-width: 1430px;  }
+#carroselPrincipal .carousel-item{height:100%; min-height:550px; }
+#carroselPrincipal{position:relative; z-index:1; background:url(https://i.imgur.com/6axE29k.jpg) center center no-repeat; background-size:cover; }
+
+.carousel-control-next, .carousel-control-prev{height:40px; width:40px; padding:12px; top:50%; bottom:auto; transform:translateY(-50%); background-color: #32CD32; }
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.carousel-fade .carousel-item {
+	opacity: 0;
+	-webkit-transition-duration: .6s;
+	transition-duration: .6s;
+	-webkit-transition-property: opacity;
+	transition-property: opacity
+}
+.carousel-fade .carousel-item-next.carousel-item-left, .carousel-fade .carousel-item-prev.carousel-item-right, .carousel-fade .carousel-item.active {
+	opacity: 1
+}
+.carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-right.active {
+	opacity: 0
+}
+.carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0)
+}
+@supports (transform-style:preserve-3d) {
+	.carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:translate3d(0, 0, 0)
+	}
+}
+.carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+ 
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+/* PAGINA DE CATEGORIA OU PRODUTO*/
+
+.img-apresentation{
+  padding-top: 15px;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.data-apresentation h1{
+  padding-top: 8px;
+  text-align: center;
+}
+.data-apresentation a{
+  text-decoration: none;
+  color: #007b5e;
+  font-size: large;
+}
+.data-apresentation p{
+  padding: 8px;
+  font-size: large;
+}
